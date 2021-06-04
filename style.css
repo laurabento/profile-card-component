@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+:root {
+    --green: hsl(185, 75%, 39%);
+    --darkGray: hsl(0, 0%, 59%);
+    --darkBlue: hsl(229, 23%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--green);
+    font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+}
+
+.img-top, .img-bottom {
+    position: absolute;
+}
+
+.img-top {
+    transform: translate(-35%, -55%);
+}
+
+.img-bottom {
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 65%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+}
+
+.name h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: var(--darkBlue);
+}
+
+.name h2 span {
+    font-weight: normal;
+    color: var(--darkGray);
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.location h4 {
+    color: var(--darkGray);
+    font-weight: normal;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.info-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+.info .number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: var(--darkBlue);
+}
+
+.info .number-info {
+    color: var(--darkGray);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 7em;
+}
+
+.attribution a {
+    color: white;
+    font-weight: 700;
+    position: relative;
+}
+
+@media screen and (max-width: 706px){
+    .img-top{
+        transform: translate(-70%, -55%);
+    }
+    .img-bottom{
+        transform: translate(70%, 55%);
+    }
+    .attribution {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .img-bottom{
+        transform: translate(70%, 55%);
+    }
+}
